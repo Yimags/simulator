@@ -147,7 +147,7 @@ public class NPCManager : MonoBehaviour, IMessageSender, IMessageReceiver
 
         var network = Loader.Instance.Network;
         network.MessagesManager?.RegisterObject(this);
-        if (!SimulatorManager.Instance.IsAPI && !network.IsClient)
+        if (true)//!SimulatorManager.Instance.IsAPI && !network.IsClient)
         {
             SpawnNPCPool();
             if (NPCActive)

@@ -105,6 +105,13 @@ namespace Simulator.Api.Commands
                         j.Add("type", "radar");
                         j.Add("name", radar.Name);
                     }
+                    else if (sensor is GroundTruth3DSensor groundtruth3D)
+                    {
+                        j = new JSONObject();
+                        j.Add("type", "groundtruth3D");
+                        j.Add("name", groundtruth3D.Name);
+                        j.Add("frequency", new JSONNumber(groundtruth3D.Frequency));
+                    }
                     else if (sensor is CanBusSensor canbus)
                     {
                         j = new JSONObject();

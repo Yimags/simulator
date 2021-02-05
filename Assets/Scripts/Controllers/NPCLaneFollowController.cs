@@ -150,7 +150,7 @@ public class NPCLaneFollowBehaviour : NPCBehaviourBase
 
     protected void Despawn()
     {
-        if (AutomaticMode && !SimulatorManager.Instance.IsAPI)
+        if (AutomaticMode )//&& !SimulatorManager.Instance.IsAPI)
         {
             ResetData();
             NPCManager.DespawnNPC(controller);
